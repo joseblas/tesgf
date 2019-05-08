@@ -1,0 +1,41 @@
+apiVersion: prow.k8s.io/v1
+kind: ProwJob
+metadata:
+  annotations:
+    prow.k8s.io/job: promotion-build
+  creationTimestamp: null
+  labels:
+    created-by-prow: "true"
+    event-GUID: 2b734bd0-6531-11e9-90bb-b9fffe20edee
+    prow.k8s.io/job: promotion-build
+    prow.k8s.io/refs.org: joseblas
+    prow.k8s.io/refs.pull: "2"
+    prow.k8s.io/refs.repo: environment-stalkerjade-staging
+    prow.k8s.io/type: presubmit
+  name: bd4590a7-65a6-11e9-b4d3-0a580a080208
+spec:
+  agent: tekton
+  cluster: default
+  context: promotion-build
+  job: promotion-build
+  namespace: jx
+  refs:
+    base_link: https://github.com/joseblas/environment-stalkerjade-staging/commit/64b1e36dbc3f893de765db4657781eb8298ac36b
+    base_ref: master
+    base_sha: 64b1e36dbc3f893de765db4657781eb8298ac36b
+    org: joseblas
+    pulls:
+    - author: joseblas
+      author_link: https://github.com/joseblas
+      commit_link: https://github.com/joseblas/environment-stalkerjade-staging/pull/2/commits/a0c5a34bf02dccd86ed9b0f7ade9145bb1271d9a
+      link: https://github.com/joseblas/environment-stalkerjade-staging/pull/2
+      number: 2
+      sha: a0c5a34bf02dccd86ed9b0f7ade9145bb1271d9a
+    repo: environment-stalkerjade-staging
+    repo_link: https://github.com/joseblas/environment-stalkerjade-staging
+  report: true
+  rerun_command: /test this
+  type: presubmit
+status:
+  startTime: "2019-04-23T09:04:02Z"
+  state: triggered
